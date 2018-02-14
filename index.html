@@ -7,11 +7,8 @@
 
     <title>HSHP FBLA</title>
 <!--
-
 Template 2088 Big City
-
 http://www.tooplate.com/view/2088-big-city
-
 -->
     <!-- load stylesheets -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
@@ -110,10 +107,10 @@ FBLA-PBL is the largest business career student organization in the world. The h
                                     <div class="tm-flex">
                                         <div class="col-lg-6 tm-white-header-container-outer tm-margin-b tm-2-col-left">
                                             <div class="tm-bg-white tm-white-header-container">
-                                                <h2 class="tm-text-title tm-text-title-small">A Little About Us</h2>
+                                                <h2 class="tm-text-title tm-text-title-small">Quotes We Live By</h2>
                                             </div>
                                             <div class="tm-bg-dark-blue text-xs-left tm-textbox tm-textbox-padding tm-white-header-body tm-white-border tm-2-col-equal-height">
-                                                <p class="tm-text"> <p> <li> President: Anaiya Whaley </li> <li> Vice President: Danyel Dantzler </li> <li> Secretary: Johnathan Davis </li> <li> Reporter: Mariah Felder </li> <li> Social Media Head: Ashley Martino </li> <li> 9th Grade Representative </li> </p>
+                                                <p class="tm-text"> "An organization's ability to learn, and translate that learning into action rapidly, is the ultimate competitive advantage." Jack Welch </p>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 tm-white-header-container-outer tm-margin-b tm-2-col-right">
@@ -329,20 +326,15 @@ FBLA-PBL is the largest business career student organization in the world. The h
         <script src="js/jquery.magnific-popup.min.js"></script> <!-- Magnific popup (http://dimsemenov.com/plugins/magnific-popup/) -->
 
         <script>
-
             function adjustHeightOfPage(pageNo) {
-
                 var offset = 80;
                 var pageContentHeight = $(".cd-hero-slider li:nth-of-type(" + pageNo + ") .js-tm-page-content").height();
-
                 if($(window).width() >= 992) { offset = 120; }
                 else if($(window).width() < 480) { offset = 40; }
-
                 // Get the page height
                 var totalPageHeight = 335 + $('.cd-slider-nav').height()
                                         + pageContentHeight + offset
                                         + $('.tm-footer').height();
-
                 // Adjust layout based on page height and window height
                 if(totalPageHeight > $(window).height())
                 {
@@ -355,32 +347,24 @@ FBLA-PBL is the largest business career student organization in the world. The h
                     $('.cd-hero-slider li:nth-of-type(' + pageNo + ')').css("min-height", "100%");
                 }
             }
-
             function uploadVideo() {
-
                 var videoWrapper = $('.cd-bg-video-wrapper');
                 if( videoWrapper.is(':visible') ) {
                     // if visible - we are not on a mobile device
                     var videoUrl = videoWrapper.data('video'),
-
                     video = $('<video autoplay loop><source src="'+videoUrl+'.mp4" type="video/mp4" /></video>');
                     video.appendTo(videoWrapper);
-
                     // play video if first slide
                     if(videoWrapper.parent('.cd-bg-video.selected').length > 0) video.get(0).play();
                 }
             }
-
             // Everything is loaded including images.
             $(window).load(function(){
-
                 adjustHeightOfPage(1); // Adjust page height
-
                 // Background Video
                 if($( window ).width() > 800) {
                     uploadVideo();
                 }
-
                 /* Gallery One pop up
                 -----------------------------------------*/
                 $('.gallery-first').magnificPopup({
@@ -388,7 +372,6 @@ FBLA-PBL is the largest business career student organization in the world. The h
                     type: 'image',
                     gallery:{enabled:true}
                 });
-
                 /* Gallery Two pop up
                 -----------------------------------------*/
                 $('.gallery-second').magnificPopup({
@@ -396,31 +379,24 @@ FBLA-PBL is the largest business career student organization in the world. The h
                     type: 'image',
                     gallery:{enabled:true}
                 });
-
                 /* Collapse menu after click
                 -----------------------------------------*/
                 $('#tmNavbar a').click(function(){
                     $('#tmNavbar').collapse('hide');
-
                     adjustHeightOfPage($(this).data("no")); // Adjust page height
                 });
-
                 /* Browser resized
                 -----------------------------------------*/
                 $( window ).resize(function() {
                     var currentPageNo = $(".cd-hero-slider li.selected .js-tm-page-content").data("page-no");
-
                     // wait 3 seconds
                     setTimeout(function() {
                         adjustHeightOfPage( currentPageNo );
                     }, 3000);
-
                     if($( window ).width() > 800) {
                        uploadVideo();
                     }
-
                 });
-
                 // Play video only when visible
                 // https://stackoverflow.com/questions/21163756/html5-and-javascript-to-play-videos-only-when-visible
                 $('video').each(function(){
@@ -430,13 +406,10 @@ FBLA-PBL is the largest business career student organization in the world. The h
                         $(this)[0].pause();
                     }
                 })
-
                 // Remove preloader (https://ihatetomatoes.net/create-custom-preloading-screen/)
                 $('body').addClass('loaded');
                 $('.tm-current-year').text(new Date().getFullYear());
-
             });
-
         </script>
 
 </body>
