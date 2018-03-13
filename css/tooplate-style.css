@@ -435,14 +435,14 @@ border-top-color: #f9c922; /* Chrome, Opera 15+, Safari 5+ */ animation: spin 1.
 
 .tm-img {
   	width: 100%;
-  	height: auto;
+  	height: 25%;
   	border: 10px solid #ffffff;
   	margin: 0 auto;
 }
 
 .tm-img-no-border {
 	width: 100%;
-	height: auto;
+	height: 25%;
 	margin: 0 auto;
 }
 
