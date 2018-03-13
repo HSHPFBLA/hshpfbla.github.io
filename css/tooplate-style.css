@@ -435,14 +435,14 @@ border-top-color: #f9c922; /* Chrome, Opera 15+, Safari 5+ */ animation: spin 1.
 
 .tm-img {
   	width: 100%;
-  	height: 25%;
+  	height: auto;
   	border: 10px solid #ffffff;
   	margin: 0 auto;
 }
 
 .tm-img-no-border {
 	width: 100%;
-	height: 50%;
+	height: auto;
 	margin: 0 auto;
 }
 
@@ -480,7 +480,7 @@ border-top-color: #f9c922; /* Chrome, Opera 15+, Safari 5+ */ animation: spin 1.
 	.grid-item {
 		padding-left: 10px;
 		padding-right: 10px;
-		width: 60%;
+		width: 50%;
 	}
 
 	.grid-item-big { width: 100%; }
